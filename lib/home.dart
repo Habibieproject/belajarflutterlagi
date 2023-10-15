@@ -1,5 +1,6 @@
 import 'package:belajarflutterlagi/button.dart';
 import 'package:belajarflutterlagi/card.dart';
+import 'package:belajarflutterlagi/layout_widget/layout_widget_page.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -15,6 +16,20 @@ class HomePage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) {
+                        return const LayoutWidget();
+                      },
+                    ));
+                  },
+                  child: const Text("Layout Widget")),
+            ],
+          ),
           ElevatedButton(
               onPressed: () {
                 Navigator.of(context).push(MaterialPageRoute(
